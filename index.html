@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+<script src="phaser.min.js"></script>
+	<script src="jquery.min.js"></script>
+	<style>
+	@font-face {
+		 font-family: 'Lato-Light';
+		 src: url(Lato-Light.ttf);
+
+	}
+
+
+	@font-face {
+		 font-family: 'Lato-Hairline';
+		 src: url(Lato-Hairline.ttf);
+
+	}
+
+
+	@font-face {
+		 font-family: 'Lato-Regular';
+		 src: url(Lato-Regular.ttf);
+
+	}
+
+	@font-face {
+		 font-family: 'Lato-Bold';
+		 src: url(Lato-Bold.ttf);
+
+	}
+
+	@font-face {
+		 font-family: 'Trajan-Regular';
+		 src: url(Trajan-Regular.ttf);
+
+	}
+	</style>
+
+
+</head>
+
+
+<body id="body" class="bcopertina">
+
+	<div id="contenitore">
+
+	<h1 id="header">
+	</h1>
+
+	<div id="gioco1" class="game" style="display:none"> </div>
+		<div id="gioco2" class="game" style="display:none">
+	</div>
+		<img id="copertinaimm" class="image" src="render/copertina.jpg" style="display:none" />
+		<img id="autoriimm" class="image" src="render/autori.jpg" style="display:none" />
+		<img id="creditiimm" class="image" src="render/crediti.jpg" style="display:none" />
+		<img id="mappinaimm" class="image" src="render/mappina.jpg" style="display:none" />
+		<img id="scena000" class="image" src="render/scena000.jpg" style="display:none" />
+		<img id="scena010" class="image" src="render/scena010.jpg" style="display:none" />
+		<img id="scena020" class="image" src="render/scena020.jpg" style="display:none" />
+		<img id="scena021" class="image" src="render/scena021.jpg" style="display:none" />
+		<img id="scena023" class="image" src="render/scena023.jpg" style="display:none" />
+		<img id="scena024" class="image" src="render/scena024.jpg" style="display:none" />
+		<img id="scena030" class="image" src="render/scena030.jpg" style="display:none" />
+		<img id="scena050" class="image" src="render/scena050.jpg" style="display:none" />
+		<img id="scena051" class="image" src="render/scena051.jpg" style="display:none" />
+		<img id="scena060" class="image" src="render/scena060.jpg" style="display:none" />
+		<img id="scena061" class="image" src="render/scena061.jpg" style="display:none" />
+		<img id="scena070" class="image" src="render/scena070.jpg" style="display:none" />
+		<img id="scena080" class="image" src="render/scena080.jpg" style="display:none" />
+		<img id="scena081" class="image" src="render/scena081.jpg" style="display:none" />
+		<img id="scena082" class="image" src="render/scena082.jpg" style="display:none" />
+		<img id="scena090" class="image" src="render/scena090.jpg" style="display:none" />
+		<img id="scena100" class="image" src="render/scena100.jpg" style="display:none" />
+		<img id="scena110" class="image" src="render/scena110.jpg" style="display:none" />
+		<img id="scena120" class="image" src="render/scena120.jpg" style="display:none" />
+		<img id="scena121" class="image" src="render/scena121.jpg" style="display:none" />
+		<img id="filettonormale" class="filetto" src="icone/filetto.png" />
+		<img id="filettocopertina" class="filetto" src="icone/filettocopertina.png" />
+
+		<h2 class="content" id="contentcopertina">
+
+<p> <span style="font-family: Lato-Bold">Federica Aulenta, Luca Desogus, Francesca Guagliardo, Alena Konnova, Lara Sirtori </p> </span>
+<br>Politecnico di Milano, Scuola del Design</br>
+<br>Corso di Laurea in Design della Comunicazione </br>
+<br>Laboratorio di Computer Grafica, Sezione C1</br>
+<br>Proff. M. Bertolo, F. Bruschi, L. Micoli, V. Rana</br>
+<br>A.A. 2017/2018</br>
+</h2>
+<h2 class="content" id="contentcrediti">
+<p><span style="font-family: Lato-Bold">icy crystal - materiale</span> <br>
+<a href="https://forums.autodesk.com/t5/3ds-max-shading-lighting-and/crystal-material/td-p/4287792">https://forums.autodesk.com/t5/3ds-max-shading-lighting-and/crystal-material/td-p/4287792</a><br></p>
+
+<p><span style="font-family: Lato-Bold">Gold Metal - materiale</span><br>
+<a href="http://www.arhigreg.net/3dmodels/Vray_materials_Arhigreg/036_VRay_material.html">http://www.arhigreg.net/3dmodels/Vray_materials_Arhigreg/036_VRay_material.html</a><br></p>
+
+<p><span style="font-family: Lato-Bold">Plastic white glossy - materiale</span><br>
+<a href="https://www.vray-materials.de/all_materials.php?mat=1892">https://www.vray-materials.de/all_materials.php?mat=1892</a><br></p>
+
+<p><span style="font-family: Lato-Bold">Beach Sand - Materiale</span><br></p>
+
+<p><span style="font-family: Lato-Bold">Italian gray stone - Materiale</span><br>
+<a href="https://www.vray-materials.de/all_materials.php?mat=2546">https://www.vray-materials.de/all_materials.php?mat=2546</a><br></p>
+
+<p><span style="font-family: Lato-Bold">Fondale caverna per minigioco </span><br>
+<a href="https://www.newgrounds.com/art/view/cutesbboy/beacon-cave-background">https://www.newgrounds.com/art/view/cutesbboy/beacon-cave-background</a><br> </p>
+
+
+
+</h2>
+
+<h2 class="contentFra" id="Francesca">
+
+Francesca Guagliardo <br> effeguagliardo@gmail.com
+</h2>
+
+<h2 class="contentFede" id="Federica">
+Federica Aulenta <br> federica.aulenta@gmail.com
+
+</h2>
+
+<h2 class="contentAle" id="Alena">
+
+Alena Konnova <br> akonnova88@gmail.com
+</h2>
+
+<h2 class="contentLara" id="Lara">
+
+Lara Sirtori <br> lara.sirtori@live.com
+</h2>
+
+<h2 class="contentLuca" id="Luca">
+
+Luca Desogus <br>lukedesogus@gmail.com
+</h2>
+
+
+
+	<h2 class="titolo" id="titolo000">
+Ahlan, Aladin
+	</h2>
+
+	<h2 class="content" id="content000">
+<p>Nel Catai è risaputo <br> che tu sia un <span style="font-family: Lato-Bold"> fannullone perditempo. </span> </p>  <p>La tua voglia di oziare fa disperare tua madre Fatima.  Sei anche follemente  innamorato della Principessa Jasmine, la figlia del Gran Sultano, <br>ma <span style="font-family: Lato-Bold"> sei povero </span>.</br></p> <p> Devi trovare un modo <br>per poter arrivare a lei!</p>
+	</h2>
+
+	<h2 class="titolo" id="titolo010">
+L’insolita visita
+	</h2>
+
+	<h2 class="content" id="content010">
+<p>Un giorno, viene a farti visita il <span style="font-family: Lato-Bold"> mago Jafar.</span></p> <p>Sostiene di essere <br>il fratello del tuo defunto padre. Il negromante allora chiede a Fatima se può portarti con sè per farti lavorare un po’.</p><p> Che cosa decidi di fare? </p>
+	</h2>
+
+	<h2 class="titolo" id="titolo020">
+Nel deserto
+	</h2>
+
+	<h2 class="content" id="content020">
+	Fatima, esausta, ti lascia con il mago. Vi fermate per una notte nel deserto: Jafar fa comparire un masso <br>e ti ordina di sollevarlo. <br> Di colpo si apre un <span style="font-family: Lato-Bold"> varco con una grotta </span>, in cui dovrai recuperare <span style="font-family: Lato-Bold"> una lampada </span>. All’alba però questa si richiuderà, quindi dovrai fare in fretta. Per aiutarti, Jafar ti consegna <span style="font-family: Lato-Bold"> un anello </span> magico da strofinare per proteggerti da eventuali insidie.
+	</h2>
+
+	<h2 class="titolo" id="titolo021">
+	L’ira di Jafar
+	</h2>
+
+	<h2 class="content" id="content021">
+Fatima ti dà ascolto. <br>Ma il malefico mago dopo qualche giorno <span style="font-family: Lato-Bold"> uccide <br>il Gran Sultano </span> e si autoproclama imperatore. <p>I cittadini sono tutti nel panico e non si sa più nulla della Principessa Jasmine. Ti precipiti in strada: <br>che caos! Scopri <br><span style="font-family: Lato-Bold"> un gruppo di ribelli </span> che vogliono far fuori Jafar <br>la notte stessa.</p> <p>Non sarebbe male unirti <br>a loro, vero? </p>
+</h2>
+
+	<h2 class="titolo" id="titolo023">
+		Jafar fugge!
+	</h2>
+
+	<h2 class="content" id="content023">
+		Ce l’hai fatta, grande!<br> Sei riuscito a far intimidire <span style="font-family: Lato-Bold"> Jafar </span>, che però <span style="font-family: Lato-Bold"> è scappato </span> teletrasportandosi <br><span style="font-family: Lato-Bold"> con il castello e Jasmine! </span> <p>Ma che cosa gli è caduto? <span style="font-family: Lato-Bold"> Un anello! </span> Sembra prezioso, ma è troppo sporco. </p> <p> Strofinandolo per pulirlo <span style="font-family: Lato-Bold"> fuoriesce un genio:</span> <p> «Esprimi un desiderio <br>e sarà esaudito». Perfetto, ora basta solo una parola per andare da Jasmine.
+	</h2>
+
+	<h2 class="titolo" id="titolo024">
+		Che disastro!
+	</h2>
+
+	<h2 class="content" id="content024">
+ Ora il mago ha ucciso tutti, dovevi essere più scaltro!
+
+	</h2>
+
+	<h2 class="titolo" id="titolo030">
+		La grotta
+	</h2>
+
+	<h2 class="content" id="content030">
+		Scendi nella <span style="font-family: Lato-Bold"> grotta </span> e con tua grande sorpresa noti che è <span style="font-family: Lato-Bold"> piena di pietre preziose.  </span> Perfetto, questa <br>è la tua occasione per poter finalmente conquistare Jasmine con tutti <br>quei tesori.  <p>Vedi in lontananza <br><span style="font-family: Lato-Bold">la lampada, </span> ma il tempo continua a scorrere e tra poco sta per arrivare l’alba.</p>
+	</h2>
+
+
+	<h2 class="titolo" id="titolo050">
+		Sbrigati!
+	</h2>
+
+	<h2 class="content" id="content050">
+	Aladin muoviti, devi uscire dalla grotta. <p><span style="font-family: Lato-Bold"> Chiedi aiuto  al mago </span> perché le pietre ti appesantiscono. Jafar ti ordina di  <span style="font-family: Lato-Bold"> consegnargli prima la lampada. </span></p>  <p>Chissà perchè la vuole così tanto… che cosa pensi di fare? </p>
+</h2>
+
+	<h2 class="titolo" id="titolo051">
+Troppo lento!
+	</h2>
+
+	<h2 class="content" id="content051">
+		Ci hai messo troppo tempo, la grotta oramai si è chiusa!
+	</h2>
+
+	<h2 class="titolo" id="titolo060">
+		L’anello
+	</h2>
+
+	<h2 class="content" id="content060">
+	Non consegni la lampada <br>al mago, perché temi <br>che questi ti uccida non appena gliela lascerai. <p>Jafar, adirato, ti rinchiude nella grotta, bloccandoti l’uscita con una formula magica. Prima di entrare in panico <span style="font-family: Lato-Bold"> ti ricordi dell'anello </span> datoti prima: lo strofini e <span style="font-family: Lato-Bold"> compare <br>un genio. </span> Questi ti esorta a esprimere un desiderio. </p>
+</h2>
+
+
+	<h2 class="titolo" id="titolo061">
+		Il rapimento
+	</h2>
+
+	<h2 class="content" id="content061">
+Gli consegni la lampada perché tanto hai già le tue pietre. Il mago ti lascia andare. Ottimo! Tornando in città, ti accorgi di un gran fermento: <span style="font-family: Lato-Bold"> la Principessa Jasime è sparita. </span> Si vocifera sia stata rapita da un mago maligno. <span style="font-family: Lato-Bold"> Dannato jafar! </span> <p>Prima però, nella fretta si è dimenticato di riprendersi l’anello. Lo strofini e spunta un genio: ora non ti resta che chiedergli ciò che vuoi. </p>
+</h2>
+
+<h2 class="titolo" id="titolo070">
+Casa dolce casa
+</h2>
+
+<h2 class="content" id="content070">
+Che stanchezza! <br>È meglio tornare a casa <br>a fare un riposino. <p> Racconti la vicenda <br>alla mamma e le lasci <br><span style="font-family: Lato-Bold"> la lampada </span> trovata<br> nella grotta.</p> <p> Fatima, <span style="font-family: Lato-Bold">pulendola,</span> <br>fa comparire <span style="font-family: Lato-Bold"> un altro Genio. </span> Anche lui può far avverare qualsiasi desiderio. Raghba! <br>Cosa volete fare? </p>
+</h2>
+
+<h2 class="titolo" id="titolo080">
+La proposta
+</h2>
+
+<h2 class="content" id="content080">
+Mai visto tutto questo lusso! La casa adesso <br> è piena di oro e tesori. <p><span style="font-family: Lato-Bold">Puoi finalmente realizzare il tuo sogno.</span> Infatti, la dote stabilita <br>dal Gran Sultano <br>per ottenere la mano <br>di Jasmine è di 400 barili pieni d’oro e, grazie ai Geni, sei riuscito ad averli in men che non si dica.</p>
+</h2>
+
+<h2 class="titolo" id="titolo081">
+Siccità
+</h2>
+
+<h2 class="content" id="content081">
+Adesso che ti sei fatto trasportare dal mago <br>non può farla franca.<br><span style="font-family: Lato-Bold">Lo sfidi a duello,</span> ma Jafar riesce a volatilizzarsi via con un suo incantesimo. <br>Offeso per l’oltraggio subito, il negromante lancia <span style="font-family: Lato-Bold">una stregoneria sulla tua città.</span> Non ci voleva, è una siccità tremenda. <br>In pochi giorni porta tutti gli abitanti alla disperazione. <br>È il momento di farti aiutare dal Genio!
+</h2>
+
+<h2 class="titolo" id="titolo082">
+La svolta
+</h2>
+
+<h2 class="content" id="content082">
+In men che non si dica <br><span style="font-family: Lato-Bold">inizia a piovere.</span> <p>Sei l’eroe della città: persino il Gran Sultano <br>ti ringrazia e ti chiede come può sdebitarsi <br>per ciò che hai fatto.</p> <p> Perfetto! Ora puoi finalmente realizzare <br><span style="font-family: Lato-Bold">il tuo sogno.</span></p>
+</h2>
+
+<h2 class="titolo" id="titolo090">
+L'inganno
+</h2>
+
+<h2 class="content" id="content090">
+	Sposi Jasmine e potete finalmente vivere felici <br>e contenti nel vostro sontuoso palazzo. <p>Ma <span style="font-family: Lato-Bold">il mago</span> sa tutto quello che hai fatto e <span style="font-family: Lato-Bold">brama vendetta:</span> si traveste <br>da mendicante e, <br>mentre sei via, ha chiesto <br>a un servo del palazzo <br>di scambiare i lucernari nuovi con quelli vecchi. Questo, ignaro, gli ha consegnato anche <br>la lampada.</p>
+</h2>
+
+<h2 class="titolo" id="titolo100">
+La sfida finale
+</h2>
+
+<h2 class="content" id="content100">
+Il mago non esita un attimo per chiedere al Genio <br>di essere trasportato via <br>con il castello <br>e la tua amata Jasmine. <p>Saputo dell’accaduto torni immediatamente a casa <br>di tua madre. </p> <p>Qui <span style="font-family: Lato-Bold">invochi il genio dell'anello.</span> Il mago adesso non potrà più avere scampo. </p>
+</h2>
+
+<h2 class="titolo" id="titolo110">
+L’insidia
+</h2>
+
+<h2 class="content" id="content110">
+Hai raggiunto <span style="font-family: Lato-Bold">Jasmine <br>nel palazzo.</span> Tutto però è <span style="font-family: Lato-Bold">molto più tetro,</span> devi porre fine a questa sofferenza. <br>Le consegni allora un sonnifero da far prendere <br>al mago. Jasmine<br> lo mette in <br>un bicchiere, ma, <br>una volta a tavola,<br> non si ricorda più <br>quale dei due sia! <br>Che bicchiere <br>sceglierà il mago?
+</h2>
+
+<h2 class="titolo" id="titolo120">
+Il lieto fine
+</h2>
+
+<h2 class="content" id="content120">
+È fatta, ha preso quello giusto. Si addormenta <br>di colpo a tavola, <br><span style="font-family: Lato-Bold">lo uccidi e abbracci pieno di felicità Jasmine.</span> <p>È ora di tornare a casa,<br> sei veramente stanco,<br> ma puoi concederti finalmente il tuo meritato riposo. In fondo, <br>non farete altro che <span style="font-family: Lato-Bold">vivere felici e contenti!</span> </p>
+</h2>
+
+<h2 class="titolo" id="titolo121">
+Non ci voleva!
+</h2>
+
+<h2 class="content" id="content121">
+Dannazione! Era quello sbagliato. Adesso è Jasmine ad essersi addormentata <br>sul tavolo. <p>Non riesci proprio a trattenere un sussulto <br>e <span style="font-family: Lato-Bold">il mago ti ha scoperto.</span></p><p> Non hai più via di scampo.</p>
+</h2>
+
+
+	<div id="footer">
+
+		<div id="left" class="button" style="display:none">
+		</div>
+
+		<div id="right" class="button">
+
+	</div>
+
+	<div id="cominciamo" class="buttonspecial">
+		<img  src="tastospeciale.png" />
+	</div>
+
+		<div id="menu" class="button">
+			<img  src="icone/lampada.png" />
+		</div>
+
+		<div id="mappa" class="button">
+			<img id="iconamappa"  src="icone/mappa.png" />
+		</div>
+
+
+		<div id="mappacopertina" class="button">
+
+		</div>
+
+		<div id="crediticopertina" class="button">
+
+		</div>
+
+		<div id="autoricopertina" class="button">
+
+		</div>
+
+
+
+		<div id="pag000" class="buttonmappa">
+pag000 Ahlan, Aladin
+
+		</div>
+
+		<div id="pag010" class="buttonmappa">
+		</div>
+
+		<div id="pag020" class="buttonmappa">
+		</div>
+
+		<div id="pag021" class="buttonmappa">
+		</div>
+
+		<div id="pag022" class="buttonmappagioco">
+		</div>
+
+		<div id="pag023" class="buttonmappa">
+		</div>
+
+		<div id="pag024" class="buttonmappafine">
+		</div>
+
+		<div id="pag030" class="buttonmappa">
+		</div>
+
+		<div id="pag040" class="buttonmappagioco">
+		</div>
+
+		<div id="pag050" class="buttonmappa">
+		</div>
+
+		<div id="pag051" class="buttonmappafine">
+		</div>
+
+		<div id="pag060" class="buttonmappa">
+		</div>
+
+		<div id="pag061" class="buttonmappa">
+		</div>
+
+		<div id="pag070" class="buttonmappa">
+		</div>
+
+		<div id="pag080" class="buttonmappa">
+		</div>
+
+		<div id="pag081" class="buttonmappa">
+		</div>
+
+		<div id="pag082" class="buttonmappa">
+		</div>
+
+		<div id="pag090" class="buttonmappa">
+		</div>
+
+		<div id="pag100" class="buttonmappa">
+		</div>
+
+		<div id="pag110" class="buttonmappa">
+		</div>
+
+		<div id="pag120" class="buttonmappafine">
+		</div>
+
+		<div id="pag121" class="buttonmappafine">
+		</div>
+
+
+
+</div>
+ </div>
+
+		<script  src="index.js"></script>
+		<script  src="giocofede.js"></script>
+		<script  src="giocofra.js"></script>
+
+
+</body>
+</html>

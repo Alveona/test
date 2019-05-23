@@ -1,0 +1,658 @@
+body {
+overflow-y:hidden;
+overflow-x:hidden;
+
+}
+
+a {
+  color: white;
+  opacity: 1;
+}
+
+a:hover {
+  color: white;
+  opacity: 0.75;
+}
+
+
+@font-face {
+   font-family: 'Lato-Light';
+   src: url(Lato-Light.ttf);
+   src: local('Lato-Light'), url('Lato-Light.ttf') format('truetype');
+}
+
+
+@font-face {
+   font-family: 'Lato-Hairline';
+   src: url(Lato-Hairline.ttf);
+   src: local('Lato-Hairline'), url('Lato-Hairline.ttf') format('truetype');
+}
+
+
+@font-face {
+   font-family: 'Lato-Regular';
+   src: url(Lato-Regular.ttf);
+   src: local('Lato-Regular'), url('Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Lato-Bold';
+   src: url(Lato-Bold.ttf);
+   src: local('Lato-Bold'), url('Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Trajan-Regular';
+   src: url(Trajan-Regular.ttf);
+   src: local('Trajan-Regular'), url('Trajan-Regular.ttf') format('truetype');
+}
+
+.bcopertina {
+  background-color: #8318b3;
+}
+
+.bmappina {
+  background-color: #8318b3;
+}
+
+.bcrediti {
+  background-color: #8318b3;
+}
+
+
+.bautori {
+  background-color: #fd4972;
+}
+
+
+.b000 {
+  background-color: #de6c0e;
+}
+
+.b010 {
+  background-color: #de6c0e;
+}
+
+.b020 {
+  background-color: #2b1afd;
+}
+
+.b021 {
+  background-color: #de6c0e;
+}
+
+.b022 {
+  background-color: #de6c0e;
+}
+
+.b023 {
+  background-color: #de6c0e;
+}
+
+.b024 {
+  background-color: #a71e24;
+}
+
+.b030 {
+  background-color: #4b1082;
+}
+
+.b040 {
+  background-color: #4b1082;
+}
+
+.b050 {
+  background-color:#4b1082;
+}
+
+.b051 {
+  background-color: #161a56;
+}
+
+.b060 {
+  background-color: #161a56;
+}
+
+.b061 {
+  background-color: #de6c0e;
+}
+
+.b070 {
+  background-color: #de6c0e;
+}
+
+.b080 {
+  background-color: #de6c0e;
+}
+
+.b081 {
+  background-color: #e9aa29;
+}
+.b082 {
+  background-color:#4499ad;
+}
+.b090 {
+  background-color: #ff6280;
+}
+.b100 {
+  background-color: #de6c0e;
+}
+.b110 {
+  background-color: #492764;
+}
+.b120 {
+  background-color: #ff6280;
+}
+
+.b121 {
+  background-color:#492764;
+}
+
+#header {
+  text-align: center;
+
+}
+
+#filettonormale {
+  position: absolute;
+  top: 80px;
+  left: 837px;
+  transform: translate(-50%, -50%);
+
+}
+
+#filettocopertina {
+  position: absolute;
+  top: 490px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#mappacopertina {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#crediticopertina {
+  position: absolute;
+  top: -120px;
+  left: 400px;
+  transform: translate(-50%, -50%);
+
+}
+
+#autoricopertina {
+  position: absolute;
+  top: -120px;
+  left: 600px;
+  transform: translate(-50%, -50%);
+
+}
+
+.titolo {
+
+  position: absolute;
+  top: 130px;
+  left: 750px;
+  height: 500px;
+  width: 175px;
+  text-align: center;
+  font-size: 26px;
+  font-family: Trajan-Regular;
+  line-height: 26px;
+  color: white;
+
+}
+
+p
+{
+margin: 6px;
+padding: 0;
+}
+
+.contentFra {
+  position: absolute;
+  top: 175px;
+  left: 60px;
+  text-align: center;
+  font-size: 12px;
+  font-family: Lato-Light;
+  line-height: 18px;
+  color: white;
+
+}
+
+.contentAle {
+  position: absolute;
+  top: 175px;
+  left: 430px;
+  text-align: center;
+  font-size: 12px;
+  font-family: Lato-Light;
+  line-height: 18px;
+  color: white;
+
+}
+.contentFede {
+  position: absolute;
+  top: 175px;
+  left: 590px;
+  text-align: center;
+  font-size: 12px;
+  font-family: Lato-Light;
+  line-height: 18px;
+  color: white;
+
+}
+
+.contentLara {
+  position: absolute;
+  top: 175px;
+  left: 270px;
+  text-align: center;
+  font-size: 12px;
+  font-family: Lato-Light;
+  line-height: 18px;
+  color: white;
+
+}
+
+.contentLuca {
+  position: absolute;
+  top: 175px;
+  left: 785px;
+  text-align: center;
+  font-size: 12px;
+  font-family: Lato-Light;
+  line-height: 18px;
+  color: white;
+
+}
+.content {
+  position: absolute;
+  top: 175px;
+  left: 750px;
+  height: 500px;
+  width: 175px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Lato-Light;
+  line-height: 24px;
+  color: white;
+
+}
+#contentcopertina {
+  position: absolute;
+  top: 540px;
+  left: 220px;
+  height: 500px;
+  width: 550px;
+  text-align: center;
+  font-size: 12px;
+  font-family: Lato-Light;
+  line-height: 10px;
+  color: white;
+
+}
+
+#contentcrediti {
+  position: absolute;
+  top: 200px;
+  left: 220px;
+  height: 500px;
+  width: 550px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Lato-Light;
+  line-height: 24px;
+  color: white;
+
+}
+#contenitore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 700px;
+  width: 1000px;
+
+}
+
+#content {
+  position: absolute;
+  top: 200px;
+  left: 700px;
+  height: 500px;
+  width: 250px;
+  background-color:  red;
+
+}
+
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+
+#footer {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 50px;
+}
+
+
+#footer2 {
+  position: absolute;
+  text-align: center;
+  width: 20%;
+  bottom: 650px;
+}
+
+
+#footermappa {
+  position: absolute;
+  text-align: center;
+  width: 30%;
+  bottom: 350px;
+}
+
+#content {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100vh;
+}
+
+#left {
+  position: absolute;
+left: 838px;
+  top: -100px;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+}
+
+#right {
+  position: absolute;
+  left: 838px;
+  top: -60px;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+}
+
+#menu {
+  position: absolute;
+  left: 765px;
+  top: -550px;
+}
+
+#mappa {
+  position: absolute;
+  left: 855px;
+  top: -550px;
+}
+#pag000 {
+  position: absolute;
+  top: -235px;
+  left: 65px;
+  transform: translate(-50%, -50%);
+}
+
+#pag010 {
+  position: absolute;
+  top: -235px;
+  left: 140px;
+  transform: translate(-50%, -50%);
+}
+
+#pag020 {
+  position: absolute;
+  top: -310px;
+  left: 190px;
+  transform: translate(-50%, -50%);
+}
+
+#pag021 {
+  position: absolute;
+  top: -160px;
+  left: 190px;
+  transform: translate(-50%, -50%);
+}
+
+#pag022 {
+  position: absolute;
+  top: -160px;
+  left: 265px;
+  transform: translate(-50%, -50%);
+}
+
+#pag023 {
+  position: absolute;
+  top: -85px;
+  left: 340px;
+  transform: translate(-50%, -50%);
+}
+
+#pag024 {
+  position: absolute;
+  top: -160px;
+  left: 340px;
+  transform: translate(-50%, -50%);
+}
+
+#pag030 {
+  position: absolute;
+  top: -310px;
+  left: 265px;
+  transform: translate(-50%, -50%);
+}
+
+#pag040 {
+  position: absolute;
+  top: -310px;
+  left: 340px;
+  transform: translate(-50%, -50%);
+}
+
+#pag050 {
+  position: absolute;
+  top: -310px;
+  left: 415px;
+  transform: translate(-50%, -50%);
+}
+
+#pag051 {
+  position: absolute;
+  top: -385px;
+  left: 415px;
+  transform: translate(-50%, -50%);
+}
+
+#pag060 {
+  position: absolute;
+  top: -310px;
+  left: 490px;
+  transform: translate(-50%, -50%);
+}
+
+#pag061 {
+  position: absolute;
+  top: -235px;
+  left: 490px;
+  transform: translate(-50%, -50%);
+}
+
+#pag070 {
+  position: absolute;
+  top: -310px;
+  left: 565px;
+  transform: translate(-50%, -50%);
+}
+
+#pag080 {
+  position: absolute;
+  top: -310px;
+  left: 640px;
+  transform: translate(-50%, -50%);
+}
+
+#pag081 {
+  position: absolute;
+  top: -385px;
+  left: 640px;
+  transform: translate(-50%, -50%);
+}
+
+#pag082 {
+  position: absolute;
+  top: -385px;
+  left: 715px;
+  transform: translate(-50%, -50%);
+}
+
+#pag090 {
+  position: absolute;
+  top: -310px;
+  left: 715px;
+  transform: translate(-50%, -50%);
+}
+
+#pag100 {
+  position: absolute;
+  top: -310px;
+  left: 790px;
+  transform: translate(-50%, -50%);
+}
+
+#pag110 {
+  position: absolute;
+  top: -310px;
+  left: 865px;
+  transform: translate(-50%, -50%);
+}
+
+#pag120 {
+  position: absolute;
+  top: -385px;
+  left: 930px;
+  transform: translate(-50%, -50%);
+}
+
+#pag121 {
+  position: absolute;
+  top: -235px;
+  left: 930px;
+  transform: translate(-50%, -50%);
+}
+
+#cominciamo {
+  position: absolute;
+  left: 275px;
+  top: -400px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 1;
+
+  transform: scale(0.8, 0.8);
+
+}
+
+#cominciamo:hover {
+  opacity: 0.75;
+
+}
+
+.button {
+  font-family: Lato-Regular;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+
+}
+
+.buttonmappa {
+  background-color: #fc6db8;
+  border: 5px solid white;
+  height: 40px;
+  width: 40px;
+  font-family: Lato-Regular;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+
+}
+
+.buttonmappafine {
+  background-color: #f9a787;
+  border: 5px solid white;
+  height: 40px;
+  width: 40px;
+  font-family: Lato-Regular;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+
+}
+
+.buttonmappagioco {
+  background-color: #d39df9;
+  border: 5px solid white;
+  height: 40px;
+  width: 40px;
+  font-family: Lato-Regular;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+
+}
+
+.button:hover {
+  opacity: 0.75;
+
+}
+
+.buttonmappa:hover {
+  opacity: 0.85;
+
+}
+
+.buttonmappafine:hover {
+  opacity: 0.85;
+
+}
+
+.buttonmappagioco:hover {
+  opacity: 0.85;
+
+}
